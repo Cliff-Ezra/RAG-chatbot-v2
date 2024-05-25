@@ -1,3 +1,7 @@
+// These functions are used to format chat conversations into a structure that can be used as input to the Llama model
+// They take a chat history (an array of user and assistant messages) as input and return a formatted prompt.
+
+// Llama 3 template
 export const Llama3Template = (defaultSystemPrompt = "") => {
   return function (chat) {
     let systemPrompt = defaultSystemPrompt;
@@ -42,6 +46,7 @@ export const Llama3Template = (defaultSystemPrompt = "") => {
   };
 };
 
+// Llama template
 export const LlamaTemplate = (defaultSystemPrompt = "") => {
   return function (chat) {
     let systemPrompt = defaultSystemPrompt;

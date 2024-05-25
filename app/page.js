@@ -1,17 +1,17 @@
 "use client";
 
-import { useEffect, useReducer, useRef, useState } from "react";
-import ChatForm from "./components/ChatForm";
-import Message from "./components/Message";
-import SlideOver from "./components/SlideOver";
-import EmptyState from "./components/EmptyState";
-import QueuedSpinner from "./components/QueuedSpinner";
-import CallToAction from "./components/CallToAction";
-import Dropdown from "./components/Dropdown";
-import { Cog6ToothIcon, CodeBracketIcon } from "@heroicons/react/20/solid";
+import { Cog6ToothIcon } from "@heroicons/react/20/solid";
 import { useCompletion } from "ai/react";
-import { Toaster, toast } from "react-hot-toast";
-import { LlamaTemplate, Llama3Template } from "../src/prompt_template";
+import { useEffect, useReducer, useRef, useState } from "react";
+import { Toaster } from "react-hot-toast";
+import { Llama3Template, LlamaTemplate } from "../src/prompt_template";
+import CallToAction from "./components/CallToAction";
+import ChatForm from "./components/ChatForm";
+import Dropdown from "./components/Dropdown";
+import EmptyState from "./components/EmptyState";
+import Message from "./components/Message";
+import QueuedSpinner from "./components/QueuedSpinner";
+import SlideOver from "./components/SlideOver";
 
 import { countTokens } from "./src/tokenizer.js";
 
@@ -62,9 +62,11 @@ const MODELS = [
   },
 ];
 
+// Prompt templates
 const llamaTemplate = LlamaTemplate();
 const llama3Template = Llama3Template();
 
+// Generate a prompt from a template and chat history
 const generatePrompt = (template, systemPrompt, messages) => {
   const chat = messages.map((message) => ({
     role: message.isUser ? "user" : "assistant",
@@ -110,18 +112,13 @@ export default function HomePage() {
   const [topP, setTopP] = useState(0.9);
   const [maxTokens, setMaxTokens] = useState(800);
 
-  //  Llava params
-  const [image, setImage] = useState(null);
-
-  // Salmonn params
-  const [audio, setAudio] = useState(null);
-
   const [metrics, dispatch] = useReducer(metricsReducer, {
     startedAt: null,
     firstMessageAt: null,
     completedAt: null,
   });
 
+  // Hook that manages AI completions & abstracts details of making requests to /api
   const { complete, completion, setInput, input } = useCompletion({
     api: "/api",
     body: {
@@ -130,8 +127,6 @@ export default function HomePage() {
       temperature: parseFloat(temp),
       topP: parseFloat(topP),
       maxTokens: parseInt(maxTokens),
-      image: image,
-      audio: audio,
     },
     onError: (e) => {
       const errorText = e.toString();
@@ -147,33 +142,6 @@ export default function HomePage() {
       dispatch({ type: "COMPLETE" });
     },
   });
-
-  const handleFileUpload = (file) => {
-    if (file) {
-      // determine if file is image or audio
-      if (
-        ["audio/mpeg", "audio/wav", "audio/ogg"].includes(
-          file.originalFile.mime
-        )
-      ) {
-        setAudio(file.fileUrl);
-        setModel(MODELS[4]);
-        toast.success(
-          "You uploaded an audio file, so you're now speaking with Salmonn."
-        );
-      } else if (["image/jpeg", "image/png"].includes(file.originalFile.mime)) {
-        setImage(file.fileUrl);
-        setModel(MODELS[3]);
-        toast.success(
-          "You uploaded an image, so you're now speaking with Llava."
-        );
-      } else {
-        toast.error(
-          `Sorry, we don't support that file type (${file.originalFile.mime}) yet. Feel free to push a PR to add support for it!`
-        );
-      }
-    }
-  };
 
   const setAndSubmitPrompt = (newPrompt) => {
     handleSubmit(newPrompt);
@@ -238,6 +206,7 @@ export default function HomePage() {
     complete(prompt);
   };
 
+  // Scroll to the bottom of the chat when new messages are added
   useEffect(() => {
     if (messages?.length > 0 || completion?.length > 0) {
       bottomRef.current.scrollIntoView({ behavior: "smooth" });
@@ -298,7 +267,6 @@ export default function HomePage() {
           handleFileUpload={handleFileUpload}
           completion={completion}
           metrics={metrics}
-          // disabled={!didPassChallenge}
         />
 
         {error && <div className="text-red-500">{error.toString()}</div>}

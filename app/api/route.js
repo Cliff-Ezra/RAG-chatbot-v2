@@ -12,8 +12,6 @@ if (!process.env.REPLICATE_API_TOKEN) {
   );
 }
 
-const { TURNSTILE_CHALLENGE_ENDPOINT, TURNSTILE_SECRET_KEY } = process.env;
-
 const VERSIONS = {
   "yorickvp/llava-13b":
     "e272157381e2a3bf12df3a8edd1f38d1dbd736bbb7437277c8b34175f8fce358",

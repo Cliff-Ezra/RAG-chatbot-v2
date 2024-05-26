@@ -167,6 +167,46 @@ export default function SlideOver({
                                 This is prepended to the prompt and helps guide
                                 system behavior.
                               </p>
+                              <div className="flex space-x-4">
+                                <button
+                                  className={`bg-gray-300 hover:bg-gray-400 text-gray-900 px-3 py-1 rounded-md ${
+                                    systemPrompt ===
+                                    "As a seasoned jurist, please provide guidance on the following legal matter:"
+                                      ? "bg-gray-400"
+                                      : ""
+                                  }`}
+                                  onClick={() =>
+                                    setSystemPrompt(
+                                      "As a seasoned jurist, please provide guidance on the following legal matter:"
+                                    )
+                                  }
+                                >
+                                  Prompt as a Jurist
+                                </button>
+                                <button
+                                  className={`bg-gray-300 hover:bg-gray-400 text-gray-900 px-3 py-1 rounded-md ${
+                                    systemPrompt ===
+                                    "As a legal novice, could you explain the following legal concept in simple terms:"
+                                      ? "bg-gray-400"
+                                      : ""
+                                  }`}
+                                  onClick={() =>
+                                    setSystemPrompt(
+                                      "As a legal novice, could you explain the following legal concept in simple terms:"
+                                    )
+                                  }
+                                >
+                                  Prompt as a Legal Novice
+                                </button>
+                                <button
+                                  className={`bg-gray-300 hover:bg-gray-400 text-gray-900 px-3 py-1 rounded-md ${
+                                    systemPrompt === "" ? "bg-gray-400" : ""
+                                  }`}
+                                  onClick={() => setSystemPrompt("")}
+                                >
+                                  Customize your own Prompt
+                                </button>
+                              </div>
                               <div className="mt-3">
                                 <textarea
                                   id="systemPrompt"
@@ -181,6 +221,7 @@ export default function SlideOver({
                               </div>
                             </div>
                           </div>
+
                           <div className="space-y-6 pb-5 pt-6">
                             <div>
                               <label

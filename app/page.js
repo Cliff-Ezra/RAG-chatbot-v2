@@ -264,7 +264,6 @@ export default function HomePage() {
           prompt={input}
           setPrompt={setInput}
           onSubmit={handleSubmit}
-          handleFileUpload={handleFileUpload}
           completion={completion}
           metrics={metrics}
         />

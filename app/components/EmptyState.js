@@ -12,7 +12,8 @@ export default function EmptyState({ setOpen, setPrompt }) {
             className="prompt-button"
             onClick={() =>
               setPrompt(
-                "Explain the 2024 Kenya Financial Act and how it affects the average citizen."
+                // "Explain the 2024 Kenya Financial Act and how it affects the average citizen."
+                "Briefly tell me what the finance act 2024 kenya is about. Be as short as possible"
               )
             }
           >

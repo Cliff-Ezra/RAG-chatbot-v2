@@ -1,5 +1,6 @@
 import { Fragment } from "react";
 import { Dialog, Transition, Listbox } from "@headlessui/react";
+import FileUpload from "./FileUpload";
 import {
   XMarkIcon,
   ChevronUpDownIcon,
@@ -312,6 +313,11 @@ export default function SlideOver({
                                   className="w-full h-1 bg-gray-100 accent-gray-500 rounded-lg appearance-none cursor-pointer"
                                 />
                               </div>
+                            </div>
+                          </div>
+                          <div className="space-y-6 pb-5 pt-6">
+                            <div>
+                              <FileUpload />
                             </div>
                           </div>
                         </div>

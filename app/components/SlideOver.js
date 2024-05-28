@@ -49,7 +49,7 @@ export default function SlideOver({
                       <div className="bg-gray-700 px-4 py-6 sm:px-6">
                         <div className="flex items-center justify-between">
                           <Dialog.Title className="text-base font-semibold leading-6 text-white">
-                            🦙 Chat with a Llama
+                            🛠️Configure the Law Chatbot System
                           </Dialog.Title>
                           <div className="ml-3 flex h-7 items-center">
                             <button
@@ -64,11 +64,6 @@ export default function SlideOver({
                               />
                             </button>
                           </div>
-                        </div>
-                        <div className="mt-1">
-                          <p className="text-sm text-gray-300">
-                            A project from Replicate.
-                          </p>
                         </div>
                       </div>
                       <div className="flex flex-1 flex-col justify-between">

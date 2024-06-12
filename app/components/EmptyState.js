@@ -11,7 +11,7 @@ export default function EmptyState({ setOpen, setPrompt }) {
       </span>
       <div className="flex flex-col text-sm sm:text-base flex-1 gap-y-4 mt-1 rounded-lg bg-gray-100 py-5 px-5">
         <p>
-          I'm a law-based chatbot specializing in recent Kenyan legislation from
+          I&apos;m a law-based chatbot specializing in recent Kenyan legislation from
           2022 to 2024. I can help you understand and navigate the key
           provisions, objectives, and impact of various acts passed during this
           period.

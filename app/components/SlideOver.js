@@ -68,7 +68,7 @@ export default function SlideOver({
                       </div>
                       <div className="flex flex-1 flex-col justify-between">
                         <div className="divide-y divide-gray-200 px-4 sm:px-6">
-                          <div className="space-y-6 pb-5 pt-6">
+                          {/* <div className="space-y-6 pb-5 pt-6">
                             <div>
                               <label
                                 htmlFor="description"
@@ -147,7 +147,7 @@ export default function SlideOver({
                                 </Listbox>
                               </div>
                             </div>
-                          </div>
+                          </div> */}
                           <div className="space-y-6 pb-5 pt-6">
                             <div>
                               <label
@@ -163,7 +163,7 @@ export default function SlideOver({
                                 This is prepended to the prompt and helps guide
                                 system behavior.
                               </p>
-                              <div className="flex space-x-4">
+                              <div className="flex space-x-4 mt-3">
                                 <button
                                   className={`bg-gray-300 hover:bg-gray-400 text-gray-900 px-3 py-1 rounded-md ${
                                     systemPrompt ===
@@ -203,7 +203,7 @@ export default function SlideOver({
                                   Customize your own Prompt
                                 </button>
                               </div>
-                              <div className="mt-3">
+                              <div className="mt-4">
                                 <textarea
                                   id="systemPrompt"
                                   name="systemPrompt"

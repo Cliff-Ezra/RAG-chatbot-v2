@@ -9,7 +9,7 @@ export const Llama3Template = (defaultSystemPrompt = "") => {
     let parts = [];
     for (let turn of chat) {
       if (turn.role === "system") {
-        systemPrompt = turn.content;
+        systemPrompt = `${systemPrompt}\n${turn.content}`;
         continue;
       }
 
@@ -54,7 +54,7 @@ export const LlamaTemplate = (defaultSystemPrompt = "") => {
     let parts = [];
     for (let turn of chat) {
       if (turn.role === "system") {
-        systemPrompt = turn.content;
+        systemPrompt = `${systemPrompt}\n${turn.content}`;
         continue;
       }
 

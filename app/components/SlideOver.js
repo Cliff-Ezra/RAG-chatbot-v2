@@ -167,13 +167,13 @@ export default function SlideOver({
                                 <button
                                   className={`bg-gray-300 hover:bg-gray-400 text-gray-900 px-3 py-1 rounded-md ${
                                     systemPrompt ===
-                                    "As a seasoned jurist, please provide guidance on the following legal matter:"
+                                    "As a seasoned jurist who is extremely knowledgeable on Kenya Law and Legislation, please provide guidance on the following legal matter:"
                                       ? "bg-gray-400"
                                       : ""
                                   }`}
                                   onClick={() =>
                                     setSystemPrompt(
-                                      "As a seasoned jurist, please provide guidance on the following legal matter:"
+                                      "As a seasoned jurist who is extremely knowledgeable on Kenya Law and Legislation, please provide guidance on the following legal matter:"
                                     )
                                   }
                                 >
@@ -182,13 +182,13 @@ export default function SlideOver({
                                 <button
                                   className={`bg-gray-300 hover:bg-gray-400 text-gray-900 px-3 py-1 rounded-md ${
                                     systemPrompt ===
-                                    "As a legal novice, could you explain the following legal concept in simple terms:"
+                                    "As a legal novice, could you explain the following legal concept in simple terms while not going into any complexities"
                                       ? "bg-gray-400"
                                       : ""
                                   }`}
                                   onClick={() =>
                                     setSystemPrompt(
-                                      "As a legal novice, could you explain the following legal concept in simple terms:"
+                                      "As a legal novice, could you explain the following legal concept in simple terms while not going into any complexities"
                                     )
                                   }
                                 >

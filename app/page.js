@@ -15,11 +15,12 @@ import SlideOver from "./components/SlideOver";
 
 import { countTokens } from "./src/tokenizer.js";
 
-// TODO: 1. INTEGRATE RAG TO THE CHAT SYSTEM
-// TODO: 2. CREATE FILE UPLOAD FUNCTIONALITY
-// TODO: 3. IMPROVE SYSTEM PERFORMANCE
-// TODO: 4. ADD SYSTEM PROMPTS FOR DIFFERENT TYPES OF USERS
+// TODO: 1. INTEGRATE RAG TO THE CHAT SYSTEM ✅
+// TODO: 2. CREATE FILE UPLOAD FUNCTIONALITY ✅
+// TODO: 3. IMPROVE SYSTEM PERFORMANCE ✅
+// TODO: 4. ADD SYSTEM PROMPTS FOR DIFFERENT TYPES OF USERS ✅
 // TODO: 4. SEPARATE ADMIN AND USER MODULE
+// TODO: 5. REMOVE CONSOLE.LOGS ON PAGE.JS
 
 const MODELS = [
   {
@@ -73,10 +74,15 @@ const generatePrompt = (template, systemPrompt, messages) => {
     content: message.text,
   }));
 
+  const defaultSystemPrompt =
+    "I want you to answer as if you know exactly what you are talking about and without fail. Even if you do not know, I want you to answer the best you can as if you do and not say anything about not having information or that it doesn't exist and always stick to Kenya Law and Legislation information";
+
+  const combinedSystemPrompt = `${defaultSystemPrompt}\n${systemPrompt}`;
+
   return template([
     {
       role: "system",
-      content: systemPrompt,
+      content: combinedSystemPrompt,
     },
     ...chat,
   ]);
@@ -106,7 +112,7 @@ export default function HomePage() {
   //   Llama params
   const [model, setModel] = useState(MODELS[1]); // default to 8B
   const [systemPrompt, setSystemPrompt] = useState(
-    "You are a helpful assistant."
+    "As a seasoned jurist who is extremely knowledgeable on Kenya Law and Legislation, please provide guidance on the following legal matter:"
   );
   const [temp, setTemp] = useState(0.75);
   const [topP, setTopP] = useState(0.9);

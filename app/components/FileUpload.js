@@ -11,7 +11,7 @@ const FileUpload = () => {
   const [progress, setProgress] = useState(0);
   const [uploadedFiles, setUploadedFiles] = useState([]);
 
-  console.log("uploaded files:", uploadedFiles);
+  // console.log("uploaded files:", uploadedFiles);
 
   useEffect(() => {
     fetchUploadedFiles();

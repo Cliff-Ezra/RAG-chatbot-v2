@@ -24,7 +24,6 @@ export default async function handler(req, res) {
             reject({ message: "Error uploading files", err });
             return;
           }
-
           const uploadPromises = req.files.map((file) => {
             return supabase.storage
               .from("documents")
@@ -34,14 +33,12 @@ export default async function handler(req, res) {
               })
               .then((response) => {
                 console.log("File uploaded successfully:", response.data);
-                // Handle the response data (e.g., store the URL or other relevant info)
               })
               .catch((error) => {
                 console.error("Error uploading file:", error);
                 throw error;
               });
           });
-
           Promise.all(uploadPromises)
             .then(() => {
               resolve();
@@ -52,7 +49,6 @@ export default async function handler(req, res) {
             });
         });
       });
-
       res.status(200).json({ message: "Files uploaded successfully" });
     } catch (err) {
       console.error("Error uploading files:", err);

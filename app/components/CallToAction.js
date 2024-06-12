@@ -1,12 +1,11 @@
-import CTAGooBG from "../../public/cta-goo-bg.webp";
+import image from "../../public/image.png";
 
 export default function CallToAction() {
-  // todo: make this real goo
   return (
     <div
       className="guide-footer-cta sm:flex items-center bg-pink-600 justify-between p-12 space-y-4"
       style={{
-        background: `url(${CTAGooBG.src}) no-repeat center center`,
+        background: `url(${image.src}) no-repeat center center`,
         backgroundSize: "cover",
         position: "relative",
         zIndex: 1,

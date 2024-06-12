@@ -16,7 +16,7 @@ export default function CallToAction() {
           Law Guru👨🏽‍⚖️
         </h1>
         <p className="text-white mx-auto mt-2 sm:mt-0">
-          A law chatbot for Kenya Law
+          A law based RAG chatbot for Kenya Law
         </p>
       </div>
     </div>

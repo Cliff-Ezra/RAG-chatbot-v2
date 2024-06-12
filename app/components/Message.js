@@ -22,7 +22,7 @@ const Message = ({ message, isUser }) => {
         </span>
       ) : (
         <span className="text-xl sm:text-2xl pt-4" title="AI">
-          🕵🏻‍♂️
+          🤖
         </span>
       )}
 

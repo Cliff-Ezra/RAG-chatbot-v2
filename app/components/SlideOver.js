@@ -68,20 +68,22 @@ export default function SlideOver({
                       </div>
                       <div className="flex flex-1 flex-col justify-between">
                         <div className="divide-y divide-gray-200 px-4 sm:px-6">
-                          {/* <div className="space-y-6 pb-5 pt-6">
+                          <div className="space-y-6 pb-5 pt-6">
                             <div>
                               <label
                                 htmlFor="description"
                                 className="block font-bold text-sm leading-6 text-gray-900"
                               >
-                                Llama Size
+                                Vector Store
                               </label>
 
                               <p
                                 id="system-prompt-description"
                                 className="mt-2 text-xs text-gray-500"
                               >
-                                Larger size means smarter, but slower.
+                                By Default Chroma is selected, however if
+                                cacheing occurs switch to FAISS to resolve or
+                                reload
                               </p>
                               <div className="">
                                 <Listbox value={size} onChange={setSize}>
@@ -147,7 +149,7 @@ export default function SlideOver({
                                 </Listbox>
                               </div>
                             </div>
-                          </div> */}
+                          </div>
                           <div className="space-y-6 pb-5 pt-6">
                             <div>
                               <label

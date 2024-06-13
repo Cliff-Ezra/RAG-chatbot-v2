@@ -25,7 +25,7 @@ import { countTokens } from "./src/tokenizer.js";
 const MODELS = [
   {
     id: "meta/meta-llama-3-70b-instruct",
-    name: "Meta Llama 3 70B",
+    name: "FAISS Vector Store",
     shortened: "70B",
     emoji: "🦙",
     description: "The most accurate, powerful next generation Llama.",
@@ -33,34 +33,34 @@ const MODELS = [
   },
   {
     id: "meta/meta-llama-3-8b-instruct",
-    name: "Meta Llama 3 8B",
+    name: "Chroma Vector Store",
     shortened: "8B",
     emoji: "🦙",
     description: "The fastest and cheapest Llama.",
     new: true,
   },
-  {
-    id: "meta/llama-2-70b-chat",
-    name: "Meta Llama 2 70B",
-    shortened: "70B",
-    emoji: "🦙",
-    description: "The most accurate, powerful Llama 2",
-  },
-  {
-    id: "meta/llama-2-13b-chat",
-    name: "Meta Llama 2 13B",
-    shortened: "13B",
-    emoji: "🦙",
-    description: "Faster and cheaper Llama 2 at the expense of accuracy.",
-  },
+  // {
+  //   id: "meta/llama-2-70b-chat",
+  //   name: "Meta Llama 2 70B",
+  //   shortened: "70B",
+  //   emoji: "🦙",
+  //   description: "The most accurate, powerful Llama 2",
+  // },
+  // {
+  //   id: "meta/llama-2-13b-chat",
+  //   name: "Meta Llama 2 13B",
+  //   shortened: "13B",
+  //   emoji: "🦙",
+  //   description: "Faster and cheaper Llama 2 at the expense of accuracy.",
+  // },
 
-  {
-    id: "meta/llama-2-7b-chat",
-    name: "Meta Llama 2 7B",
-    shortened: "7B",
-    emoji: "🦙",
-    description: "The smallest, fastest Llama 2 chat model.",
-  },
+  // {
+  //   id: "meta/llama-2-7b-chat",
+  //   name: "Meta Llama 2 7B",
+  //   shortened: "7B",
+  //   emoji: "🦙",
+  //   description: "The smallest, fastest Llama 2 chat model.",
+  // },
 ];
 
 // Prompt templates

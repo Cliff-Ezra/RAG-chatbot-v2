@@ -2,10 +2,10 @@ import { Analytics } from "@vercel/analytics/react";
 import "../styles/globals.css";
 
 export const metadata = {
-  title: "Chat with Meta Llama 3 on Replicate",
+  title: "Chat with Law Guru Chatbot",
   openGraph: {
-    title: "Chat with Meta Llama 3 on Replicate",
-    description: "Llama 3 is the latest language model from Meta.",
+    title: "Chat with Law Guru Chatbot",
+    description: "Law Guru is powered by Llama 3the latest language model from Meta.",
   },
 };
 

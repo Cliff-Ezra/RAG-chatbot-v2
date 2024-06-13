@@ -15,13 +15,6 @@ import SlideOver from "./components/SlideOver";
 
 import { countTokens } from "./src/tokenizer.js";
 
-// TODO: 1. INTEGRATE RAG TO THE CHAT SYSTEM ✅
-// TODO: 2. CREATE FILE UPLOAD FUNCTIONALITY ✅
-// TODO: 3. IMPROVE SYSTEM PERFORMANCE ✅
-// TODO: 4. ADD SYSTEM PROMPTS FOR DIFFERENT TYPES OF USERS ✅
-// TODO: 4. SEPARATE ADMIN AND USER MODULE
-// TODO: 5. REMOVE CONSOLE.LOGS ON PAGE.JS
-
 const MODELS = [
   {
     id: "meta/meta-llama-3-70b-instruct",

@@ -82,7 +82,7 @@ export default function SlideOver({
                                 className="mt-2 text-xs text-gray-500"
                               >
                                 By Default Chroma is selected, however if
-                                cacheing occurs switch to FAISS to resolve or
+                                caching occurs switch to FAISS to resolve or
                                 reload
                               </p>
                               <div className="">

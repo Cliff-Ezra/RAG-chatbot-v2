@@ -1,13 +1,6 @@
-# Llama Chat 🦙
+# Law Guru Chatbot 👨🏽‍⚖️
 
-This is a [Next.js](https://nextjs.org/) app that demonstrates how to build a chat UI using the [Llama 3](https://replicate.com/meta/llama-3-70b-chat) language model and Replicate's [streaming API (private beta)](https://replicate.com/docs/streaming).
-
-Here's a demo:
-
-https://github.com/replicate/llama-chat/assets/14149230/e700b256-dc34-4c4e-b912-8a84ec4bec6a
-
-
-
+This is an app for a Law Chatbot. It is built upon RAG principles and uses the [Llama 3](https://replicate.com/meta/llama-3-70b-chat) language model.
 
 ## Usage
 
@@ -17,10 +10,12 @@ Install dependencies:
 npm install
 ```
 
-Add your [Replicate API token](https://replicate.com/account#token) to `.env.local`:
+Add your [Replicate API token](https://replicate.com/account#token) to as well as your [Supabase Authenication](https://supabase.com/docs/guides/getting-started/quickstarts/nextjs) `.env.local`:
 
 ```
-REPLICATE_API_TOKEN=<your-token-here>
+REPLICATE_API_TOKEN=r8...
+NEXT_PUBLIC_SUPABASE_URL=https...
+NEXT_PUBLIC_SUPABASE_ANON_KEY=eyJh...
 ```
 
 Run the development server:
@@ -30,5 +25,3 @@ npm run dev
 ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser.
-
-For detailed instructions on how to create and use this template, see [replicate.com/docs/get-started/nextjs](https://replicate.com/docs/get-started/nextjs)

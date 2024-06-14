@@ -175,7 +175,7 @@ export default function HomePage() {
       messageHistory
     )}\n`;
 
-    console.log(prompt);
+    // console.log(prompt);
 
     // Check if we exceed max tokens and truncate the message history if so.
     while (countTokens(prompt) > MAX_TOKENS) {

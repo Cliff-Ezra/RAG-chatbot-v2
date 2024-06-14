@@ -68,7 +68,7 @@ const generatePrompt = (template, systemPrompt, messages) => {
   }));
 
   const defaultSystemPrompt =
-    "I want you to answer as if you know exactly what you are talking about and without fail. Even if you do not know, I want you to answer the best you can as if you do and not say anything about not having information or that it doesn't exist and always stick to Kenya Law and Legislation information";
+    "I want you to answer as if you know exactly what you are talking about and without fail for legislation up to 2024. Even if you do not know, I want you to answer the best you can as if you do and not say anything about not having information or that it doesn't exist and always stick to Kenya Law and Legislation information";
 
   const combinedSystemPrompt = `${defaultSystemPrompt}\n${systemPrompt}`;
 

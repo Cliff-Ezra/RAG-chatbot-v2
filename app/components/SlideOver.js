@@ -162,8 +162,8 @@ export default function SlideOver({
                                 id="system-prompt-description"
                                 className="mt-2 text-xs text-gray-500"
                               >
-                                This is prepended to the prompt and helps guide
-                                system behavior.
+                                This is an instructional information that is
+                                added and helps guide system behavior.
                               </p>
                               <div className="flex space-x-4 mt-3">
                                 <button

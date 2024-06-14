@@ -10,7 +10,7 @@ Install dependencies:
 npm install
 ```
 
-Add your [Replicate API token](https://replicate.com/account#token) to as well as your [Supabase Authenication](https://supabase.com/docs/guides/getting-started/quickstarts/nextjs) `.env.local`:
+Add your [Replicate API token](https://replicate.com/account#token) to as well as your [Supabase Authenication](https://supabase.com/docs/guides/getting-started/quickstarts/nextjs) to `.env.local`:
 
 ```
 REPLICATE_API_TOKEN=r8...
